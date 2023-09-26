@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Akcja Github
-      uses:  actions/checkout@v4
+      uses: actions/checkout@v4
 
     - name: Synchornizacja do FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -23,6 +23,7 @@ jobs:
         server: 20.121.123.166
         username: ${{secrets.ftp_username}}
         password: ${{secrets.ftp_password}}
+        server-dir: www/flask_project_1/
 
         
 
